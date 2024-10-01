@@ -1,0 +1,39 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    color: antiquewhite;
+  background-color: #0e0e0e;
+}
+
+#button-container{
+  display: flex;
+}
+
+#url-input{
+  width: 70vw;
+  flex: 1;
+  padding-bottom: 5px;
+  /* padding-top: 5px; */
+  background-color: #0a0a0a;
+  color:antiquewhite;
+  border: 2px solid rgb(55, 55, 55);
+  border-radius: 3%;
+}
+
+button{
+  cursor: pointer;
+  background-color: blanchedalmond;
+  color: #0a0a0a;
+  border-radius: 5%;
+}
+
+webview{
+  height: 100vh;
+}
+
+
+@media(max-width:800px){
+  #go{
+    display:none;
+  }
+}
