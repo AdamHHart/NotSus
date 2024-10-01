@@ -31,6 +31,32 @@ webview{
   height: 100vh;
 }
 
+h1{
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#title-div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#title{
+  padding-top: 5px;
+}
+
+#link-button-container {
+  display: flex;
+  justify-content: space-evenly; /* Keeps equal spacing between buttons */
+  width: 66vw; /* 66% of the viewport width */
+}
+
+@link-button {
+  flex-grow: 1; /* Allows each button to grow equally */
+  margin: 0 5px; /* Optional: Adjusts spacing between buttons */
+  padding: 10px; /* Optional: Adjusts padding for button size */
+}
 
 @media(max-width:800px){
   #go{
