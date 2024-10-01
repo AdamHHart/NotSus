@@ -20,6 +20,7 @@ const urlInputField = document.getElementById("url-input");
 // webview
 
 const webview = document.getElementById("webview");
+let url = ""
 
 urlInputField.addEventListener("keydown", (event) => {
   if(event.key==="Enter"){
@@ -31,6 +32,12 @@ urlInputField.addEventListener("keydown", (event) => {
 goButton.addEventListener("click", (event) =>{
   event.preventDefault();
   handleUrl();
+})
+
+searchButton.addEventListener("click", (event) => {
+  url="https://www.google.com/";
+  urlInputField.value = url;
+  webview.src = url;
 })
 
 function handleUrl() {
