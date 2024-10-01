@@ -3,7 +3,7 @@ import './index.css';
 
 
 
-// buttons
+// browser buttons
 
 const backButton = document.getElementById("back-button");
 const forwardButton = document.getElementById("forward-button");
@@ -11,6 +11,15 @@ const reloadButton = document.getElementById("reload-button");
 const searchButton = document.getElementById("search-button");
 const newWindowButton = document.getElementById("new-window-button");
 const goButton = document.getElementById("go");
+
+// link buttons
+
+const khanButton = document.getElementById("khanButton");
+const wikiButton = document.getElementById("wikiButton");
+const perpButton = document.getElementById("perpButton");
+const tinkButton = document.getElementById("tinkButton");
+const scraButton = document.getElementById("scraButton");
+const replButton = document.getElementById("replButton");
 
 
 // url field
@@ -36,6 +45,38 @@ goButton.addEventListener("click", (event) =>{
 
 searchButton.addEventListener("click", (event) => {
   url="https://www.google.com/";
+  urlInputField.value = url;
+  webview.src = url;
+})
+
+// link buttons
+khanButton.addEventListener("click", (event) => {
+  url="https://www.khanacademy.org/";
+  urlInputField.value = url;
+  webview.src = url;
+})
+wikiButton.addEventListener("click", (event) => {
+  url="https://en.wikipedia.org/wiki/Main_Page";
+  urlInputField.value = url;
+  webview.src = url;
+})
+perpButton.addEventListener("click", (event) => {
+  url="https://www.perplexity.ai/";
+  urlInputField.value = url;
+  webview.src = url;
+})
+tinkButton.addEventListener("click", (event) => {
+  url="https://www.tinkercad.com/dashboard";
+  urlInputField.value = url;
+  webview.src = url;
+})
+scraButton.addEventListener("click", (event) => {
+  url="https://scratch.mit.edu/";
+  urlInputField.value = url;
+  webview.src = url;
+})
+replButton.addEventListener("click", (event) => {
+  url="https://replit.com/";
   urlInputField.value = url;
   webview.src = url;
 })
