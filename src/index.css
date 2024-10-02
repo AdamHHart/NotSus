@@ -10,7 +10,8 @@ body {
 }
 
 #url-input{
-  width: 70vw;
+  width: 60vw;
+  height: 30px;
   flex: 1;
   padding-bottom: 5px;
   /* padding-top: 5px; */
@@ -37,26 +38,41 @@ h1{
   padding-right: 10px;
 }
 
-#title-div{
+#site-tools{
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
+  
 }
-#title{
-  padding-top: 5px;
-}
+
 
 #link-button-container {
   display: flex;
-  justify-content: space-evenly; /* Keeps equal spacing between buttons */
-  width: 66vw; /* 66% of the viewport width */
+  justify-content: space-between;
+  width: 60vw; /* Reduce width to give more room for the title */
 }
 
-@link-button {
-  flex-grow: 1; /* Allows each button to grow equally */
-  margin: 0 5px; /* Optional: Adjusts spacing between buttons */
-  padding: 10px; /* Optional: Adjusts padding for button size */
+button {
+  flex-grow: 1;
+  /* margin: 0 5px; */
+  padding: 10px;
+  width: 90%;
 }
+
+#title-div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 30vw; /* Ensure this width is flexible and allows space for the title */
+}
+
+h1#title {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.5rem; /* Adjust font size to fit within a single line */
+  white-space: nowrap; /* Prevent title from wrapping to the next line */
+}
+
 
 @media(max-width:800px){
   #go{
