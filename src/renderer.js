@@ -49,6 +49,11 @@ searchButton.addEventListener("click", (event) => {
   webview.src = url;
 })
 
+webview.addEventListener("did-navigate", (event) => {
+  url = event.url;
+  urlInputField.value = url;
+})
+
 // link buttons
 khanButton.addEventListener("click", (event) => {
   url="https://www.khanacademy.org/";
