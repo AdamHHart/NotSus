@@ -1,81 +1,116 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-    color: antiquewhite;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: antiquewhite;
   background-color: #0e0e0e;
+  margin: 0;
+  padding: 0;
 }
 
-#button-container{
+#browser-tools, #site-tools {
   display: flex;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
-#url-input{
-  width: 60vw;
-  height: 30px;
+#browser-tools {
+  align-items: stretch; /* Ensure all children stretch to full height */
+}
+
+#button-container {
+  display: flex;
+  width: 30vw;
+  padding: 0;
+  margin: 0;
+}
+
+#button-container button {
   flex: 1;
-  padding-bottom: 5px;
-  /* padding-top: 5px; */
+  margin: 0;
+  padding: 5px 0;
+  /* border: none; */
+  border-radius: 0;
+  border: 1px solid #0e0e0e;
+}
+
+#url-input {
+  width: 60vw;
+  height: auto; /* Allow it to stretch */
+  padding: 0 5px;
+  margin: 0;
   background-color: #0a0a0a;
-  color:antiquewhite;
+  color: antiquewhite;
   border: 2px solid rgb(55, 55, 55);
-  border-radius: 3%;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
-button{
-  cursor: pointer;
-  background-color: blanchedalmond;
-  color: #0a0a0a;
-  border-radius: 5%;
+#go {
+  width: 10vw;
+  padding: 5px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
 }
-
-webview{
-  height: 100vh;
-}
-
-h1{
-  margin: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#site-tools{
-  display: flex;
-  justify-content: space-between;
-  
-}
-
 
 #link-button-container {
   display: flex;
-  justify-content: space-between;
-  width: 60vw; /* Reduce width to give more room for the title */
+  width: 60vw;
+  padding: 0;
+  font-size: 0;
 }
 
-button {
-  flex-grow: 1;
-  /* margin: 0 5px; */
-  padding: 10px;
-  width: 90%;
+#link-button-container button {
+  flex: 1 1 0;
+  margin: 0;
+  padding: 5px 0;
+  border: 1px solid #0e0e0e;
+  border-radius: 0;
+  font-size: 14px;
 }
 
 #title-div {
+  width: 30vw;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  width: 30vw; /* Ensure this width is flexible and allows space for the title */
+  padding-right: 10px;
+}
+
+button {
+  cursor: pointer;
+  background-color: blanchedalmond;
+  color: #0a0a0a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h1#title {
   margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 1.5rem; /* Adjust font size to fit within a single line */
-  white-space: nowrap; /* Prevent title from wrapping to the next line */
+  font-size: 1.5rem;
+  white-space: nowrap;
 }
 
+webview {
+  height: 100vh;
+}
 
-@media(max-width:800px){
-  #go{
-    display:none;
+@media (max-width: 768px) {
+  #link-button-container button, #url-input, #go, #button-container button {
+      font-size: 12px;
+  }
+  
+  h1#title {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #link-button-container button, #url-input, #go, #button-container button {
+      font-size: 10px;
+  }
+  
+  h1#title {
+      font-size: 1rem;
   }
 }

@@ -43,10 +43,24 @@ goButton.addEventListener("click", (event) =>{
   handleUrl();
 })
 
+newWindowButton.addEventListener("click", (event) =>{
+  api.newWindow();
+})
+
 searchButton.addEventListener("click", (event) => {
   url="https://www.google.com/";
   urlInputField.value = url;
   webview.src = url;
+})
+
+backButton.addEventListener("click", ()=>{
+  webview.goBack();
+})
+forwardButton.addEventListener("click", ()=>{
+  webview.goForward();
+})
+reloadButton.addEventListener("click", ()=>{
+  webview.reload();
 })
 
 webview.addEventListener("did-navigate", (event) => {

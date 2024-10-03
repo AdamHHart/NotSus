@@ -7,40 +7,36 @@
   </head>
   <body>
     <!-- Navbar -->
-    
-    <div id="browser-tools" style="display: flex; width:100vw;">
-      <div id="button-container">
-        <button id="back-button">&#8592;</button>
-        <button id="forward-button">&#8593;</button>
-        <button id="reload-button">&#x21bb;</button>
-        <button id="search-button">&#128270;</button>
-        <button id="new-window-button">+</button>
-      </div>
-      <form>
-        <input id="url-input" required>
-      </form>
-      <button id="go">go</button>
-    </div>
-    <div id="site-tools" style="display: flex; width:100vw;">
-      <div id="link-button-container"></div>
-      
-        <!-- <button class="link-button"><a href="https://www.khanacademy.org/">Khan</button> -->
-        <button id="khanButton" class="link-button">Khan</button>
-        <button id="wikiButton" class="link-button">Wiki</button>
-        <button id="perpButton" class="link-button">Perp</button>
-        <button id="tinkButton" class="link-button">Tink</button>
-        <button id="scraButton" class="link-button">Scra</button>
-        <button id="replButton" class="link-button">Repl</button>
-        <div id="title-div">
-           <h1 id="title">🧐 NotSus.io </h1>
+    <div id="browser-tools">
+        <div id="button-container">
+            <button id="back-button">&#8592;</button>
+            <button id="forward-button">&#8593;</button>
+            <button id="reload-button">&#x21bb;</button>
+            <button id="search-button">&#128270;</button>
+            <button id="new-window-button">+</button>
         </div>
-       
-      </div>
+        <input id="url-input" required>
+        <button id="go">go</button>
+    </div>
+    <div id="site-tools">
+        <div id="link-button-container">
+            <button id="wikiButton" class="link-button">Wiki</button>
+            <button id="perpButton" class="link-button">Perp</button>
+            <button id="tinkButton" class="link-button">Tink</button>
+            <button id="scraButton" class="link-button">Scra</button>
+            <button id="replButton" class="link-button">Repl</button>
+        </div>
+        <div id="title-div">
+            <h1 id="title">🧐 NotSus.io</h1>
+        </div>
     </div>
     <webview id="webview"></webview>
 
+    <script type="module" src="/src/renderer.js"></script>
+</body>
+
      <!-- Header -->
-    <h1>🧐 NotSus.io </h1>
+    <!-- <h1>🧐 NotSus.io </h1> -->
     <!-- <p>A browser for distraction free education. </p>
     <p>Curiosity, Creativity, Productivity, and Individuality. No exposure to addictive or algorithmized content. 
       This browser was made to delay the virtual corruption of children's minds, and expose them only to healthy content, creative tools, and tutorials. 
@@ -50,6 +46,4 @@
 
     <!-- main -->
     
-    <script type="module" src="/src/renderer.js"></script>
-  </body>
 </html>
