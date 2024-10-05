@@ -68,37 +68,42 @@ webview.addEventListener("did-navigate", (event) => {
   urlInputField.value = url;
 })
 
-// link buttons
-khanButton.addEventListener("click", (event) => {
-  url="https://www.khanacademy.org/";
-  urlInputField.value = url;
-  webview.src = url;
-})
-wikiButton.addEventListener("click", (event) => {
-  url="https://en.wikipedia.org/wiki/Main_Page";
-  urlInputField.value = url;
-  webview.src = url;
-})
-perpButton.addEventListener("click", (event) => {
-  url="https://www.perplexity.ai/";
-  urlInputField.value = url;
-  webview.src = url;
-})
-tinkButton.addEventListener("click", (event) => {
-  url="https://www.tinkercad.com/dashboard";
-  urlInputField.value = url;
-  webview.src = url;
-})
-scraButton.addEventListener("click", (event) => {
-  url="https://scratch.mit.edu/";
-  urlInputField.value = url;
-  webview.src = url;
-})
-replButton.addEventListener("click", (event) => {
-  url="https://replit.com/";
-  urlInputField.value = url;
-  webview.src = url;
-})
+document.addEventListener('DOMContentLoaded', function() {
+    // link buttons
+    khanButton.addEventListener("click", (event) => {
+      url="https://www.khanacademy.org/";
+      urlInputField.value = url;
+      webview.src = url;
+    })
+    wikiButton.addEventListener("click", (event) => {
+      url="https://en.wikipedia.org/wiki/Main_Page";
+      urlInputField.value = url;
+      webview.src = url;
+    })
+    perpButton.addEventListener("click", (event) => {
+      url="https://www.perplexity.ai/";
+      urlInputField.value = url;
+      webview.src = url;
+    })
+    tinkButton.addEventListener("click", (event) => {
+      url="https://www.tinkercad.com/dashboard";
+      urlInputField.value = url;
+      webview.src = url;
+    })
+    scraButton.addEventListener("click", (event) => {
+      url="https://scratch.mit.edu/";
+      urlInputField.value = url;
+      webview.src = url;
+    })
+    replButton.addEventListener("click", (event) => {
+      url="https://replit.com/";
+      urlInputField.value = url;
+      webview.src = url;
+    })
+
+  
+});
+
 
 function handleUrl() {
   let url = "";
